@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  iid: 1
+  assigned_id: 1
+  open: false
+  user: one
+
+two:
+  iid: 1
+  assigned_id: 1
+  open: false
+  user: two

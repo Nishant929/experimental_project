@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="signup.css" rel='stylesheet' type='text/css' />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--webfonts-->
+<link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+<!--//webfonts-->
+</head>
+<body>
+  <%= form_for @user do |f| %>
+	<ul id="navigation">
+    <li><%= link_to "Home", {:action=>'index', :controller=>'home'}, class: "home_list"%></li>
+    <li><%= link_to "Personal", {:action=> 'login', :controller=>'sessions'}, class: "home_list"%></li>
+    <li><%= link_to "Business", {:action=>'business', :controller=> 'home'}, class: "home_list" %></li>
+    <li><%= link_to "Pricing", {:action=>'pricing', :controller=>'home'}, class: "home_list" %></li>
+    <li><%= link_to "Signup", {:action=>'new', :controller=>'users'}, class: "home_list" %></li>
+			<li><%= f.text_field :Search, :placeholder=>'Search', :id=>"search_box", :style=> 'padding:10px;margin-top:8px;height:15px;margin-left:90px'%> <div id = "temp"><%= f.submit(:Submit, {:id => 'search_button', :style=> 'border-radius: 8px;padding:5px;height:25px;margin-top:12px;margin-left:40px;background-color:#43bb8e'}) %> </div>
+   </ul>
+<div class="main">
+	<div class="social-icons">
+		 <div class="col_1_of_f span_1_of_f">
+		 </div>
+		 <div class="col_1_of_f span_1_of_f">
+		</div>
+		<div class="clear"> </div>
+      </div>
+      <h2>Signup</h2>
+		<form>
+		   <div class="lable">
+		        <div class="col_1_of_2 span_1_of_2">	<%= f.text_field :first_name, :class => 'text', :placeholder=>'First Name', {:html=>'onfocus="this.value = '';" '} %></div>
+                <div class="col_1_of_2 span_1_of_2"><%= f.text_field :last_name, :class => 'text', :placeholder=>'Last Name', {:html=>'onfocus="this.value = '';" '} %></div>
+                <div class="clear"> </div>
+		   </div>
+		   <div class="lable-2">
+		        <%= f.text_field :email, :class => 'text', :placeholder=>'Email', {:html=>'onfocus="this.value = '';" '} %>
+						<%= f.text_field :city, :class => 'text', :placeholder=>'City', {:html=>'onfocus="this.value = '';" '} %>
+						<%= f.text_field :state, :class => 'text', :placeholder=>'State', {:html=>'onfocus="this.value = '';" '} %>
+						<%= f.text_field :country, :class => 'text', :placeholder=>'Country', {:html=>'onfocus="this.value = '';" '} %>
+						<%= f.text_field :zip_code, :class => 'text', :placeholder=>'Zip Code', {:html=>'onfocus="this.value = '';" '} %>
+						<%= f.text_field :phone_number, :class => 'text', :placeholder=>'Phone Number', {:html=>'onfocus="this.value = '';" '} %>
+		        <%= f.text_field :password, :class => 'text', :placeholder=>'Password', {:html=>'onfocus="this.value = '';" '} %>
+						<%= f.text_field :confirm_password, :class => 'text', :placeholder=>'Confirm Password', {:html=>'onfocus="this.value = '';" '} %>
+
+
+		   </div>
+		   <h3>By creating an account, you agree to our <span> class="term">Terms & Conditions</span></h3>
+		   <div class="submit">
+			  <%= f.submit(:Submit, :id=> "signup_button", :placeholder=> 'Create Account' , :style=> 'margin-left:5px;float:left;margin-top:55px;height:40px;width:150px;padding:10px;') %>
+		   </div>
+		   <div class="clear"> </div>
+		</form><br><br>
+		<!--//end-main---->
+		</div>
+</body>
+</html>

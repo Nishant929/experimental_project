@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pid: 1
+  dob: 2017-03-26
+  fname: MyString
+  lname: MyString
+  phone_no: 1
+  city: MyString
+  state: MyString
+  country: MyString
+  zip_code: 1
+  repos: 1
+  followers: 1
+  following: 1
+  user: one
+
+two:
+  pid: 1
+  dob: 2017-03-26
+  fname: MyString
+  lname: MyString
+  phone_no: 1
+  city: MyString
+  state: MyString
+  country: MyString
+  zip_code: 1
+  repos: 1
+  followers: 1
+  following: 1
+  user: two

@@ -1,0 +1,21 @@
+
+<h1>Temporary Page to Show Users. Go to Localhost and login !</h1>
+<br><br><br>
+<ul>
+  <%= flash[:notice] %>
+  <% @users.each do |user| %>
+    <li style="float:left">
+
+      <p> Welcome <%= user.username %> ! </p>
+      <p> Your email : <%= user.email %>
+      <p> <b><u>Profile</b></u> <br>
+        <% @profiles.each do |profile| %>
+          <li>Date of birth : <%= profile.dob %> </li><br>
+          <li>Full Name : <%= profile.fname%> <%=profile.lname %> </li><br>
+          <li>Address : <%= profile.city%>, <%=profile.state%>, <%=profile.country%>, <%=profile.zip_code%> </li><br>
+        <li>  Phone number : <%= profile.phone_no %> </li><br>
+          <%end%>
+      </p>
+    </li><br><br>
+  <% end %>
+</ul>

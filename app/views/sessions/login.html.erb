@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<style>	submit_tag {width:100px;}</style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Google Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+
+<body id="login_body">
+	<%= form_tag(:action => 'login_attempt') do %>
+	<div class="container">
+		<div class="top">
+			<br><br><br><%= link_to "Code Lab", :action=>'index', :controller=>'home', :id=>'title' %>
+		</div>
+		<div class="login-box animated fadeInUp">
+			<div class="box-header">
+				<h2>Log In</h2>
+			</div><br><br>
+			<label for="username">Username or Email</label>
+			<br/>
+			<%= text_field_tag (:username_or_email)%>
+			<br><br>
+			<label for="password">Password</label>
+			<br>
+			<%= password_field_tag :password %>
+			<%= submit_tag :Login, :style=>'background-color:#40A46F;border:1px solid #ffffff' %>
+			<br>
+			<%= link_to "Forgot your password?", '#', :class=>'small', :style=>'color:black' %>
+		</div>
+	</div>
+</body>
+
+<script>
+	$(document).ready(function () {
+    	$('#logo').addClass('animated fadeInDown');
+    	$("input:text:visible:first").focus();
+	});
+</script>
+<% end %>
+</html>

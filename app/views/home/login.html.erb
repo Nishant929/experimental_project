@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Google Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+
+<body id="login_body">
+	<%= form_for :home do |f| %>
+	<div class="container">
+		<div class="top">
+			<br><br><br><%= link_to "Code Lab", :action=>'index', :controller=>'home', :id=>'title' %>
+		</div>
+		<div class="login-box animated fadeInUp">
+			<div class="box-header">
+				<h2>Log In</h2>
+			</div><br><br>
+			<label for="username">Username</label>
+			<br/>
+			<%= f.text_field( :Username, :placeholder=>'Username', :id=>'username') %>
+			<br><br>
+			<label for="password">Password</label>
+			<br>
+			<%= f.text_field( :Password, :placeholder=>'Password', :id=>'password') %>
+			<%= f.submit(:Login,:class => 'login-box', :style=>'background-color:#40A46F;border:1px solid #ffffff') %>
+			<br>
+			<%= link_to "Forgot your password?", '#', :class=>'small' %>
+		</div>
+	</div>
+</body>
+
+<script>
+	$(document).ready(function () {
+    	$('#logo').addClass('animated fadeInDown');
+    	$("input:text:visible:first").focus();
+	});
+</script>
+<% end %>
+</html>

@@ -1,0 +1,54 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  #editback  {
+    background-image: url(/assets/edit-back.jpg);
+    background-size: cover;
+    height:100%;
+    width:100%;
+  }
+  p,b {
+    color: white;
+  }
+  </style>
+</head>
+<body id = "editback">
+	<ul id="navigation">
+    <%= form_for @current_user, url: users_path, :html => { :multipart => true } do |f| %>
+    <li><%= text_field_tag :Search,'Search', :id=>"search_box", :style=> 'padding:10px;margin-top:8px;height:15px;margin-left:90px'%> <div id = "temp"><%= submit_tag(:Submit, {:id => 'search_button', :style=> 'border-radius: 8px;padding:5px;height:25px;margin-top:12px;margin-left:40px;background-color:#43bb8e'}) %></div></li>
+    <li><%= link_to "Pricing", {:action=>'pricing', :controller=>'home'}, class: "home_list", :style => 'margin-left:400px' %></li>
+    <li><%= link_to "Welcome #{@current_user.username} !", {:action=>'profile', :controller=>'sessions'}, class: "home_list"%></li>
+  </ul>
+
+   <div style="height:100%;width:30%;float:left;margin-left:50px;margin-top:100px;">
+     <!-- profile picture not showing ..... why ??-->
+     <%= form_for @current_user, url: users_path do |f| %>
+     <%= f.file_field :photo, :style => 'margin-left:20px' %>
+     <br><br><br>
+     <b><%= @current_user.username %><br><br>
+    <%= %>  Repositories<br><br>
+     <% if @profile.followers.nil? %> 0 <% else %> <%= @profile.followers %><% end %> Followers<br><br>
+     <% if @profile.following.nil? %> 0 <% else %> <%= @profile.following %><% end %> Following<br><br></b>
+   </div>
+
+   <div style="height:100%;width:50%;margin-left:600px;margin-top:50px">
+       <b>Username </b>       <%= f.text_field :username, :value=>@current_user.username, :style => 'margin-left:55px;height:20px;' %>      <br><br><br>
+       <b>Email </b>          <%= f.text_field :email, :value=>@current_user.email, :style => 'margin-left:90px;height:20px;' %>            <br><br><br>
+       <%= fields_for @profile do |t| %>
+       <b>First Name</b>     <%= t.text_field :fname, :value=>@profile.fname, :style => 'margin-left:50px;height:20px;' %> <br><br><br>
+       <b>Last Name </b>      <%= t.text_field :lname, :value=>@profile.lname, :style => 'margin-left:51px;height:20px;' %>         <br><br><br>
+       <b>Date of Birth </b>  <%= t.text_field :dob, :value=>@profile.dob, :style => 'margin-left:40px;height:20px;' %>             <br><br><br>
+       <b>Phone Number </b>   <%= t.text_field :phone_no, :value=>@profile.phone_no, :style => 'margin-left:23px;height:20px;' %>   <br><br><br>
+       <b>City </b>           <%= t.text_field :city, :value=>@profile.city, :style => 'margin-left:103px;height:20px;' %>           <br><br><br>
+       <b>State </b>          <%= t.text_field :state, :value=>@profile.state, :style => 'margin-left:93px;height:20px;' %>         <br><br><br>
+       <b>Country </b>        <%= t.text_field :country, :value=>@profile.country, :style => 'margin-left:75px;height:20px;' %>     <br><br><br>
+       <b>Pincode </b>        <%= t.text_field :zip_code, :value=>@profile.zip_code, :style => 'margin-left:73px;height:20px;' %>   <br><br><br>
+       <%= f.submit(:save, :value=>'Save', :style=>'height:40px;width:100px;margin-right:540px;padding:1px',:action=>'update', :controller=>'users') %>
+   </div><br><br><br>
+   <hr>
+   <% end %>
+   <% end %>
+  <% end %>
+ </body>
+</html>

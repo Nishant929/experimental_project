@@ -1,0 +1,58 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <%= form_for :home do |f| %>
+	<ul id="navigation">
+    <li><%= link_to "Home", {:action=>'index', :controller=>'home'}, class: "home_list"%></li>
+    <li><%= link_to "Personal", {:action=> 'login', :controller=>'sessions'}, class: "home_list"%></li>
+    <li><%= link_to "Business", {:action=>'business', :controller=> 'home'}, class: "home_list" %></li>
+    <li><%= link_to "Pricing", {:action=>'pricing', :controller=>'home'}, class: "home_list" %></li>
+    <li><%= link_to "Signup", {:action=>'new', :controller=>'users'}, class: "home_list" %></li>
+			<li><%= f.text_field :Search, :placeholder=>'Search', :id=>"search_box", :style=> 'padding:10px;margin-top:8px;height:15px;margin-left:90px'%> <div id = "temp"><%= f.submit(:Submit, {:id => 'search_button', :style=> 'border-radius: 8px;padding:5px;height:25px;margin-top:12px;margin-left:40px;background-color:#43bb8e'}) %> </div>
+   </ul>
+   <div style="width:100%">
+		<div class="back">
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		</div>
+		<div id="signup">
+			  <fieldset style="margin:2px;border: 1px solid #ccc;height:425px">
+			  <legend style="color:white"> Register </legend>
+        <%= f.text_field :Username, :placeholder=> "Pick a username", :style=> 'margin-left:5px;margin-top:55px;width:300px' ,:class=> "main" %><br>
+        <%= f.text_field :Email, :placeholder=> "Email", :style=> 'margin-left:5px;margin-top:55px;width:300px' ,:class=> "main" %><br>
+        <%= f.password_field :password, :placeholder=> "Choose a password", :style=> 'margin-left:5px;margin-top:55px;width:300px;padding:10px;background-color: #3CBC8D;color: white;box-sizing: border-box;border: 2px solid #ccc;border-radius: 4px;font-weight:100;font-size:12px' %><br>
+        <%= f.submit(:Submit, :id=> "signup_button", :style=> 'margin-left:5px;float:left;margin-top:55px;height:40px;width:150px;padding:10px;') %> <br><br>
+      </fieldset>
+		</div>
+	</div>
+
+	<div id="parent">
+		<div class="child">
+			<h2 id="head" style="text-align:center">WELCOME TO DEVELOPER'S DEN<h2><br>
+			<h2 id="head2" style="text-align:center">Good design adds value faster than it adds cost.</h2>
+		</div>
+		<div id="span1">
+		<%= image_tag("span1.png", :class=>"img")%>
+			<h3 class = "span_head"> One platform, from start to finish</h3>
+			<h4>With hundreds of integrations, Codelab is flexible enough to be at the center of your development process.</h4>
+		</div>
+	    <div id="span2">
+	    	<%= image_tag("span2.png", :class=>"img") %>
+	    	<h3 class = "span_head">Millions of projects</h3>
+	    	<h4>Codelab is home to millions of open source projects. Try one out or get inspired to create your own.</h4>
+		</div>
+		<div id="span3">
+		 	<%= image_tag("span3.png", :class=>"img") %>
+		 	<h3 class = "span_head">A better way to work</h3>
+		 	<h4>From hobbyists to professionals, GitHub helps developers simplify the way they build software.</h4>
+		</div>
+		<div id="span4">
+			<%= image_tag("span4.png", :class=>"img") %>
+			<h3 class = "span_head">For everything you build</h3>
+			<h4>Host and manage your code on GitHub. You can keep your work private or share it with the world.</h4>
+		</div>
+	</div>
+<%end%>
+</body>
+</html>

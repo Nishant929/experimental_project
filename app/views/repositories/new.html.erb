@@ -1,0 +1,28 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    #repo-back  {
+      background-image: url(/assets/signup-back.jpeg);
+      background-size: cover;
+      height:100%;
+      width:100%;
+    }
+  </style>
+</head>
+<body id = "repo-back">
+  <%= form_for @repository, :url => repositories_new_path(@repo), url:{action: :"create"} do |f| %>
+	<ul id="navigation">
+    <li><%= link_to "Home", {:action => 'home', :controller => 'sessions'}, class: "home_list"%></li>
+    <li><%= link_to "Pricing", {:action=>'pricing', :controller=>'home'},:style=>'margin-left:40px', class: "home_list" %></li>
+    <li><%= link_to "Welcome #{@current_user.username}", {:action => 'profile', :controller => 'sessions'}, :style => 'margin-left:650px', class: "home_list"%></li>
+   </ul>
+   <br><br><br><br><br><br><br><br><br><br>
+   <br><br>
+   <%= f.text_field :rname, :class => 'text', :value=>'Repository Name...', :onfocus=>"this.value = '';", :style => 'margin-left:450px;height:25px;width:400px;border-radius:3px;' %><br><br><br>
+   <%= f.file_field :repo, :style => 'margin-left:600px' %><br><br><br>
+   <%= f.submit :value => 'Upload', :style => 'height:30px;width:150px;margin-right:550px;padding:5px', :action => 'create', :controller => 'repositories' %>
+<!--        It uploads the file to experimental_project/public/system/repositories/repos           -->
+<% end %>
+ </body>
+</html>

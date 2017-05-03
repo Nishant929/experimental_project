@@ -1,0 +1,65 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="background-color:white">
+  <%= form_for :home do |f| %>
+  <ul id="navigation">
+    <li><%= link_to "Home", {:action=>'index', :controller=>'home'}, class: "home_list"%></li>
+    <li><%= link_to "Personal", {:action=> 'login', :controller=>'sessions'}, class: "home_list"%></li>
+    <li><%= link_to "Business", {:action=>'business', :controller=> 'home'}, class: "home_list" %></li>
+    <li><%= link_to "Pricing", {:action=>'pricing', :controller=>'home'}, class: "home_list" %></li>
+    <li><%= link_to "Signup", {:action=>'new', :controller=>'users'}, class: "home_list" %></li>
+			<li><%= f.text_field :Search, :placeholder=>'Search', :id=>"search_box", :style=> 'padding:10px;margin-top:8px;height:15px;margin-left:90px'%> <div id = "temp"><%= f.submit(:Submit, {:id => 'search_button', :style=> 'border-radius: 8px;padding:5px;height:25px;margin-top:12px;margin-left:40px;background-color:#43bb8e'}) %> </div>
+   </ul>
+   <div style="background-color:#e0e0e0;height:300px">
+        <br><br>
+        <h1 id="div0h1">Plan for your workflows !</h1>
+        <br><br>
+        <h2 id="div0h2">Code Lab is free to use for public and open source projects.<br>Work together across unlimited private repositories with a paid plan.<h2>
+   </div>
+
+
+   <div id="whole">
+        <div id="table1">
+            <div class="table_header">
+                    <h2> Developer </h2>
+            </div>
+                <div class="table_content">
+                    <br><h1> $2 <h1>
+                    <p style="font-size:30px;text-align:center"> per month </p><br>
+                    <h3 style="font-size:20px;color:black"> Includes : </h3><br>
+                    <ul id="list1">
+                      <li> <p> Personal account </p> </li>
+                      <li> <p> Unlimited public repositories </p> </li>
+                      <li> <p> Unlimited private repositories </p> </li>
+                      <li> <p> Unlimited collaborators </p> </li>
+                      <li> <br><br><p style="font-size:15px;"> *Free for 1st month </p> </li>
+                      <li> <br><br><%= f.submit(:"Sign Up", :id=> "signup_button", :style=> 'float:left;margin-right:55px;height:40px;width:150px;padding:10px;') %> </li>
+                    </ul>
+                </div>
+
+                <div id="table2">
+                    <div class="table_header">new
+                            <h2> Team </h2>
+                    </div>
+                        <div class="table_content">
+                            <br><h1> $5 <h1>
+                            <p style="font-size:30px;text-align:center"> per user / per month </p><br>
+                            <h3 style="font-size:20px;color:black"> Includes : </h3><br>
+                            <ul id="list1">
+                              <li> <p> Organization account </p> </li>
+                              <li> <p> Unlimited public repositories </p> </li>
+                              <li> <p> Unlimited private repositories </p> </li>
+                              <li> <p> Team and user permissions </p> </li>
+                              <li> <br><br><p style="font-size:15px;"> *Starting at $15 / month which includes your first 5 users. </p> </li>
+                              <li> <br><%= f.submit(:"Sign up you team", :id=> "signup_button", :style=> 'float:left;margin-right:55px;height:40px;width:160px;padding:10px;') %> </li>
+                            </ul>
+                        </div>
+                  </div>
+            </div>
+        </div>
+   </div>
+ </body>
+ <% end %>
+ </html>

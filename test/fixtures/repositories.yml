@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rid: 1
+  rname: MyString
+  type: 
+  dcount: 1
+  user: one
+
+two:
+  rid: 1
+  rname: MyString
+  type: 
+  dcount: 1
+  user: two

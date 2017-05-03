@@ -1,0 +1,139 @@
+#navigation {
+
+				margin:0;
+				padding:0;
+				overflow:hidden;
+				background-color: #333333;
+
+			}
+/* ---------------------------LISTS--------------------------- */
+li 			{
+				list-style:none;
+				float:left;
+				font-size:20px;
+			}
+
+			.home_list  {
+				height:50px;
+							display:block;
+							text-shadow: 1px 1px grey;
+							color:white;
+							text-align:center;
+							padding:22px 25px 0px 55px;
+							text-decoration:none;
+						}
+
+			li a:hover  {
+							height:50px;
+							background-color: #111111;
+							display:block;
+							text-shadow: 1px 1px grey;
+							color:white;
+							text-align:center;
+							padding:22px 25px 0px 55px;
+							text-decoration:none;
+						}
+
+			li a:visited {
+										height:50px;
+										text-decoration: none;
+										display:block;
+										text-shadow: 1px 1px grey;
+										color:white;
+										text-align:center;
+										padding:22px 25px 0px 55px;
+										text-decoration:none;
+									}
+/*---------------------------Spans---------------------------*/
+
+/* ---------------------------Divisions--------------------------- */
+
+#whole		{
+							width:100%;
+							height: 1000px;
+}
+
+#table1		{
+							margin-top: 100px;
+							width:30%;
+							height:750px;
+							float:left;
+							margin-left: 150px;
+							text-align: left;
+}
+
+#table2		{
+							width:30%;
+							height:750px;
+							float:right;
+							text-align: left;
+							margin-right: -400px;
+							margin-top: -525px;
+}
+
+.table_header	{
+									border: 1px #e1e4e8 solid;
+									padding: 10px;
+									text-decoration: none;
+									width: 300px;
+									text-align: center;;
+}
+
+.table_content	{
+									border: 1px #e1e4e8 solid;
+									padding: 10px;
+									text-decoration: none;
+									height:450px;
+									width: 300px;
+									text-align: left;
+
+}
+/* ---------------------------Divisions - font--------------------------- */
+#div0h1		{
+					margin-top: 20px;
+					font-weight: 300;
+					font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", sans-serif;
+					text-align: center;
+					font-size: 54px;
+					color: #24292e;
+}
+
+#div0h2		{
+						margin-top: 20px;
+						font-weight: 300;
+						font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", sans-serif;
+						font-size: 26px;
+						text-align: center;
+						color: #586069;
+
+}
+
+.table_header	h2 {
+										font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", sans-serif;
+										text-align: center;
+										font-weight: 300;
+										color: #24292e;
+										font-size: 30px;
+
+}
+
+.table_content	h1	{
+												font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", sans-serif;
+												text-align: center;
+												font-weight: 300;
+												color: #24292e;
+												font-size: 40px;
+												text-decoration: none;
+												text-shadow: none;
+}
+
+.table_content	p,h3	{
+												font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", sans-serif;
+												text-align: left;
+												font-weight: 300;
+												color: #586069;
+												font-size: 20px;
+												text-decoration: none;
+												text-shadow: none;
+}
+/* ---------------------------Images--------------------------- */

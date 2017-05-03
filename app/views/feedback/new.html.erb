@@ -1,0 +1,19 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <%= form_for :feedback do |f| %>
+	<ul id="navigation">
+    <!--<li><%= f.text_field :Search, :placeholder=>'Search', :id=>"search_box", :style=> 'padding:10px;margin-top:8px;height:15px;margin-left:90px'%> <div id = "temp"><%= f.submit(:Submit, {:id => 'search_button', :style=> 'border-radius: 8px;padding:5px;height:25px;margin-top:12px;margin-left:40px;background-color:#43bb8e'}) %></div></li>-->
+    <li><%= link_to "Pricing", {:action=>'pricing', :controller=>'home'},:style=>'margin-left:400px', class: "home_list" %></li>
+    <li><%= link_to "Welcome #{@current_user.username}", '#', class: "home_list"%></li>
+   </ul>
+
+   Enter your feedback !
+   <%= f.text_field :comment, :style => 'width:70%;height:50%'%>
+   <%= f.submit(:submit, {:value=>'Submit', :style=>'height:50px;width:200px;padding:2px',:action=>'create'}) %>
+   <% end %>
+   <br><br><br>
+ </body>
+ </html>

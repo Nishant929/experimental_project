@@ -1,0 +1,45 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+  #home-body  {
+      background-image: url(/assets/profile_back.jpeg);
+      background-size: cover;
+      height:100%;
+      width:100%;
+    }
+</style>
+<body id="home-body">
+  <%= form_for :sessions do |f| %>
+	<ul id="navigation">
+    <li style="margin-left:0px"><%= link_to "Logout", {:action=>'logout', :controller=>'sessions'}, class: "home_list" %></li>
+    <li><%= f.text_field :Search, :placeholder=>'Search', :id=>"search_box", :style=> 'padding:10px;margin-top:8px;height:15px;margin-left:90px'%> <div id = "temp"><%= f.submit(:Submit, {:id => 'search_button', :style=> 'border-radius: 8px;padding:5px;height:25px;margin-top:12px;margin-left:40px;background-color:#43bb8e'}) %></div></li>
+    <li style="margin-left:200px"><%= link_to "Pricing", {:action=>'pricing', :controller=>'home'}, class: "home_list" %></li>
+    <li style="margin-left:18px"><%= link_to "Welcome  #{@current_user.username} !", {:action=>'profile', :controller=>'sessions'}, class: "home_list"%></li>
+   </ul>
+   <div>
+     <h2 style="text-align:center;font-size:30px;margin-top:90px"> Learn and Code ! </h2><br>
+
+   </div>
+
+   <div style="border:2px dashed grey;float:left;margin-top:100px;height:250px;width:600px">
+     <h2 style="text-align:center;font-size:30px;margin-top:20px"> Discover interesting projects </h2>
+     <br><br>
+     <h4 style="text-align:center;font-size:20px;margin-top:30px;color:white"> Explore and learn with fun ! </h4>
+     <% end %>
+   </div>
+   <div style="border:2px solid grey;float:right;margin-top:100px;width:400px;height:250px">
+     Your Repositories :
+     <% Array(@repos).each do |repo| %>
+       <ul>
+<!--     <li> <%= text_field_tag :search_repo, :placeholder=>'Find a repository...' %></li> -->
+         <li><%= link_to "#{repo.rname}", {:action => 'show', :controller => 'repositories'}, :style=> 'font-size:20px;margin-left:0px' %></li><br>
+<!--         <%= link_to "(Click here to download)", {:action => 'download_file', :controller => 'sessions'}, :style=>'font-size:10px;margin-right:335px;color:white;margin-top:10px'%>      not working for download-->
+<!--     <li> link_to "Click here to see all...", {:action => 'Show', :controller => 'repositories'} </li>  writing this line within erb tags raises an error even if it is in comment  -->
+      </ul>
+   </div>
+
+   <% end %>
+ </body>
+</html>

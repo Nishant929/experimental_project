@@ -1,0 +1,252 @@
+
+#navigation {
+
+				margin:0;
+				padding:0;
+				overflow:hidden;
+				background-color: #333333;
+				height: 50px;
+
+			}
+/* ---------------------------Images--------------------------- */
+
+.img		{
+						height: 62%;
+						width: 70%;
+		}
+
+
+/* ---------------------------BOX--------------------------- */
+
+#search_box	{
+					padding-top: 15px;
+					padding-left: 20px;
+					width:200px;
+					height:25px;
+					background-color:#cecccc;
+					border: 1px solid #979e9b;
+					border-radius: 4px;
+					font-size:15px;
+		}
+
+#temp		{
+					float:right;
+		}
+/* ---------------------------Fonts--------------------------- */
+
+
+h3			{
+				font-size:16px;
+				color:#333;
+				text-align:center;
+				font-weight:500;
+				font-family:Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", sans-serif;
+			}
+
+h4			{
+				font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+				font-size:15px;
+				color:#767676;
+				font-weight:500;
+				text-align:center;
+			}
+
+p			{
+				text-align:center;
+				color:#630791;
+				font-size:30px;
+				font-family:cursive, sans-serif;
+				font-weight:200;
+				text-shadow: 0px -4px 2px #f27d7d;
+			}
+
+.span_head	{
+					margin-top: 10px;
+					margin-bottom: 10px;
+					text-align: center;
+}
+
+#head		{
+					font-family:Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", sans-serif;
+					font-size:35px;
+					font-weight:300;
+					color: black;
+					margin-top: 20px;
+				}
+
+#head2		{
+						font-family:Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", sans-serif;
+						font-size:28px;
+						font-weight:300;
+						color:#767676;
+						margin-top: 40px;
+					}
+/* ---------------------------List--------------------------- */
+li 			{
+				list-style:none;
+				float:left;
+				font-size:20px;
+			}
+
+.home_list  {
+				display:block;
+				text-shadow: 1px 1px grey;
+				color:white;
+				text-align:center;
+				padding:22px 25px 0px 55px;
+				text-decoration:none;
+			}
+
+li a:hover  {
+				height:50px;
+				background-color: #111111;
+				display:block;
+				text-shadow: 1px 1px grey;
+				color:white;
+				text-align:center;
+				padding:22px 25px 0px 55px;
+				text-decoration:none;
+			}
+
+li a:visited {
+							height:50px;
+							text-decoration: none;
+							display:block;
+							text-shadow: 1px 1px grey;
+							color:white;
+							text-align:center;
+							padding:22px 25px 0px 55px;
+							text-decoration:none;
+						}
+
+/* ---------------------------Divisions--------------------------- */
+
+.back       {
+				background-image: url("codelab.jpeg");
+				float: left;
+				width: 75%;
+
+			}
+
+#signup     {
+				float: right;
+				width: 25%;
+				background-image: url("signup-back.jpeg");
+				height: 500px;
+			}
+
+#parent     {
+							height:470px;
+							position:relative;
+							bottom:0;
+							left:0;
+							right:0;
+							top:430px;
+							width: 100%;
+						}
+
+#span1		{
+							top:235px;
+							position:absolute;
+							width:24.5%;
+							height:295px;
+							background-color:#f4f4f4;
+							border:1px solid #e5e5e5;
+					}
+
+#span2		{
+							width:24.5%;
+							height:295px;
+							position:absolute;
+							top:235px;
+							left:315px;
+							background-color:#f4f4f4;
+							border:1px solid #e5e5e5;
+					}
+
+#span3		{
+							position:absolute;
+							height:295px;
+							width:24.5%;
+							top:235px;
+							left:630px;
+							background-color:#f4f4f4;
+							border:1px solid #e5e5e5;
+					}
+
+#span4		{
+								position:absolute;
+								height:295px;
+								width:26%;
+								top:235px;
+								left:945px;
+								background-color:#f4f4f4;
+								border:1px solid #e5e5e5;
+						}
+/* ---------------------------Button--------------------------- */
+
+#signup_button	{
+										color: white;
+										background-color: #2784d1;
+										border: #afacac;
+										border-style: solid;
+										border-width: 1px;
+										text-align: center;
+										display: inline-block;
+										border-radius: 8px;
+
+
+			}
+
+	#search_button 	{
+								width:100px;
+								height:25px;
+								margin:05px;
+								border: 1px solid #979e9b;
+								font-size: 15px;
+								margin-right: -20px;
+					}
+/* ---------------------------Form--------------------------- */
+.main		{
+				padding:10px;
+				background-color: #3CBC8D;
+    		color: white;
+       	box-sizing: border-box;
+        border: 2px solid #ccc;
+        margin-top:50px;
+        border-radius: 4px;
+
+			}
+
+::-webkit-input-placeholder {
+						color:white;
+					}
+
+:-ms-input-placeholder {
+							color:white;
+						}
+
+::-moz-placeholder	{
+						color:white;
+					}
+
+::-moz-placeholder	{
+						color:white;
+					}
+
+:-moz-placeholder	{
+						color:white;
+					}
+
+.main:focus {
+				border: 3px solid #555;
+			}
+
+
+.child		{
+				position:absolute;
+				height:50%;
+				width:100%;
+				background-color:#f4f4f4;
+
+			}

@@ -1,0 +1,70 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    #hh {
+      margin-right: -10px;font-family: sans-serif;font-size: 16px;
+    }
+    #profile_back {
+    background-image: url(/assets/profile-back.jpeg);
+    background-size: cover;
+    height:100%;
+    width:100%;
+  }
+  </style>
+</head>
+<body id="profile_back">
+  <%= form_for :sessions do |f| %>
+	<ul id="navigation">
+    <li style="margin-left:0px"><%= link_to "Logout", {:action=>'logout', :controller=>'sessions'}, class: "home_list" %></li>
+    <li><%= f.text_field :Search, :placeholder=>'Search', :id=>"search_box", :style=> 'padding:10px;margin-top:8px;height:15px;margin-left:90px'%> <div id = "temp"><%= f.submit(:Submit, {:id => 'search_button', :style=> 'border-radius: 8px;padding:5px;height:25px;margin-top:12px;margin-left:40px;background-color:#43bb8e'}) %></div></li>
+    <li><%=  link_to "Home", {:action=>'home', :controller=>'sessions'}, :style=>'margin-left:100px', class: "home_list"%></li>
+    <li><%= link_to "Pricing", {:action=>'pricing', :controller=>'home'}, class: "home_list" %></li>
+    <li><%= link_to "Welcome #{@current_user.username}", '#', class: "home_list"%></li>
+   </ul>
+
+   <div style="height:660px;width:25%;float:left;border-right:2px solid white">
+     <!-- profile picture -->
+     <br><br><br>
+     <%= image_tag @current_user.photo.url(:small) %>
+     <%= @current_user.username %><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+     	<%= form_tag(:action => 'new', :controller => 'feedback') do %>
+     <%= submit_tag :Feedback, :style=>'height:55px;padding:10px;border-radius:4px;margin-right:200px;margin-top:30px;width:100px' %>
+     <% end %>
+
+   </div>
+
+   <div style="height:600px;width:60%;padding:30px;border-right:2px solid white">
+       <h5 id = "hh", style="margin-right:-5px;">
+       <b>First Name: </b>     <%= @current_user.profile.fname %>      <br><br><br>
+       <b>Last Name: </b>      <%= @current_user.profile.lname %>      <br><br><br>
+       <b>Date of Birth: </b>  <%= @current_user.profile.dob %>        <br><br><br>
+       <b>Username: </b>       <%= @current_user.username %>           <br><br><br>
+       <b>Email: </b>          <%= @current_user.email %>              <br><br><br>
+       <b>Phone Number: </b>   <%= @current_user.profile.phone_no %>   <br><br><br>
+       <b>City: </b>           <%= @current_user.profile.city %>       <br><br><br>
+       <b>State: </b>          <%= @current_user.profile.state %>      <br><br><br>
+       <b>Country: </b>        <%= @current_user.profile.country %>    <br><br><br>
+       <b>Pincode: </b>        <%= @current_user.profile.zip_code %>   <br><br><br><br></h5>
+       <%= form_tag(:action => 'edit', :controller => 'sessions') do %>
+       <%= submit_tag :Edit, :style=>'height:55px;width:100px;padding:1px;border-radius:4px;margin-right:200px;margin-top:10px' %>
+      <% end %>
+   </div>
+
+   <div style="height:600px;width:19%;float:right;margin-top:-600px">
+     <u> Repositories </u><br><br><br>
+     <% @current_user.repositories.each do |r| %>
+     <ul>
+        <li><%= r.rname %></li>
+      </ul>
+     <% end %>
+     <br>
+     <%= form_tag(:action => 'new', :controller => 'repositories') do %>
+     <%= submit_tag :"Create Repository", :style=>'height:55px;padding:10px;border-radius:4px;margin-right:90px;margin-top:30px', :id=>'repo_button' %>
+     <% end %>
+   </div>
+   <hr>
+   <% end %>
+
+ </body>
+</html>

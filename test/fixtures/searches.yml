@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sid: 1
+  text: MyText
+  time: 2017-03-26 14:20:08
+  user: one
+
+two:
+  sid: 1
+  text: MyText
+  time: 2017-03-26 14:20:08
+  user: two
