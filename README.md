@@ -1,10 +1,14 @@
 # README
 
-Clone the repository
-open terminal
-change directory to the downlaoded repository
-type : rails s or rails server
-open your browser and goto - localhost:3000
+1. Clone the repository
+
+2. Open terminal
+
+3. Change directory to the downlaoded repository
+
+4. Type : rails s or rails server
+
+5. Open your browser and goto - localhost:3000
 
 
 * Ruby version - 2.4.0p0
